@@ -15,6 +15,8 @@ add_subdirectory(coralmicro)
 
 add_executable_m7(coralmicro-app
         main.cc
+        FreeRTOS_CLI.c
+        cli.cc
 )
 
 target_link_libraries(coralmicro-app
