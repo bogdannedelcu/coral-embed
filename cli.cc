@@ -93,7 +93,7 @@ BaseType_t xParameter1StringLength, xParameter2StringLength, xResult;
 static const CLI_Command_Definition_t xGpioCommand =
 {
     "gpio",
-    "gpio <number> <on/off/get>: Sets GPIO number on on or off\r\n",
+    "gpio <number> <on/off/get>: Sets GPIO number on on or off. \r\n(30-AD03, 31-AD26, 32-AD27, 33-B2_15, 34-B2_09) \r\n",
     prvGpioCommand,
     2
 };
