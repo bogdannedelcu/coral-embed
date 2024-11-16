@@ -33,6 +33,19 @@ extern "C" void app_main(void* param) {
   (void)param;
   auto user_led = coralmicro::Led::kUser;
 
+
+  // Turn on Status LED to show the board is on.
+  coralmicro::LedSet(coralmicro::Led::kStatus, true);
+
+  constexpr coralmicro::Gpio kGpiosToTest[] = {
+      coralmicro::Gpio::kAA,    coralmicro::Gpio::kAB,
+      coralmicro::Gpio::kBtHostWake     
+  };
+
+  for (auto gpio : kGpiosToTest) {
+    coralmicro::GpioSetMode(gpio, coralmicro::GpioMode::kOutput);
+  }
+
   xTaskCreate(&vCommandConsoleTask, "xCommandCLI", configMINIMAL_STACK_SIZE,
               &user_led, coralmicro::kAppTaskPriority, nullptr);
 

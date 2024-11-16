@@ -15,7 +15,7 @@
 coralmicro::I2cConfig config;
 
 static char * pcWelcomeMessage =
-  "Coral CLI 0.1. with i2c5 active and gpio, use help\r\n";
+  "Coral CLI 1.1. with i2c5 active and gpio, use help\r\n";
 
 
 /* This function implements the behaviour of a command, so must have the correct
