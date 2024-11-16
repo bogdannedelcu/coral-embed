@@ -39,7 +39,7 @@ extern "C" void app_main(void* param) {
 
   constexpr coralmicro::Gpio kGpiosToTest[] = {
       coralmicro::Gpio::kAA,    coralmicro::Gpio::kAB,
-      coralmicro::Gpio::kBtHostWake     
+      coralmicro::Gpio::kBtHostWake,      coralmicro::Gpio::kBtDevWake
   };
 
   for (auto gpio : kGpiosToTest) {
